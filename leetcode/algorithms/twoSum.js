@@ -7,18 +7,18 @@
  * @param {number} target
  * @return {number[]}
  */
- var twoSum = function(nums, target) {
-    let result = [];    
+var twoSum = function (nums, target) {
+    let result = [];
     let subtrahendMap = new Map();
-    nums.forEach((num, i)=>{
-        subtrahendMap.set(num-target, i);
+    nums.forEach((num, i) => {
+        subtrahendMap.set(num - target, i);
     })
-    for(let i=0;i<nums.length;i++){
-        if (subtrahendMap.has(-nums[i])){
-            result.push(i,subtrahendMap.get(-nums[i]));
+    for (let i = 0; i < nums.length; i++) {
+        if (subtrahendMap.has(-nums[i])) {
+            result.push(i, subtrahendMap.get(-nums[i]));
             break;
         }
     }
-    
+
     return result;
 };
