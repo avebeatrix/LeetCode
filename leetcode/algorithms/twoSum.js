@@ -14,7 +14,7 @@ var twoSum = function (nums, target) {
         subtrahendMap.set(num - target, i);
     })
     for (let i = 0; i < nums.length; i++) {
-        if (subtrahendMap.has(-nums[i])) {
+        if (subtrahendMap.has(-nums[i]) && i !== subtrahendMap.get(-nums[i])) {
             result.push(i, subtrahendMap.get(-nums[i]));
             break;
         }
@@ -22,3 +22,6 @@ var twoSum = function (nums, target) {
 
     return result;
 };
+
+let ans = twoSum([3, 2, 4], 6);
+console.log(ans);
