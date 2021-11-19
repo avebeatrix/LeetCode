@@ -1,4 +1,4 @@
-// Source : https://leetcode.com/problems/reverse-string/
+// Source : https://leetcode.com/problems/climbing-stairs/
 // Author : avebeatrix
 // Date   : 2021-11-19
 
@@ -15,5 +15,3 @@ var climbStairs = function (n) {
     }
     return n >= 2 ? b : a;
 };
-let t = climbStairs(2);
-let r;
