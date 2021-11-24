@@ -1,6 +1,6 @@
 // Source : https://leetcode.com/problems/first-bad-version/
 // Author : avebeatrix
-// Date   : 2021-11-22
+// Date   : 2021-11-22 
 /**
  * Definition for isBadVersion()
  * 
