@@ -1,4 +1,4 @@
-// Source : https://leetcode.com/problems/remove-element/submissions/
+// Source : https://leetcode.com/problems/remove-element/
 // Author : avebeatrix
 // Date   : 2021-12-11
 /**
