@@ -43,6 +43,3 @@ var threeSum = function (nums) {
 
     return result;
 };
-
-let d = threeSum([0, 0, 0, 0]);
-let k;
