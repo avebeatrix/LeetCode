@@ -1,4 +1,4 @@
-// Source : https://leetcode.com/problems/insert-delete-getrandom-o1/
+// Source : https://leetcode.com/problems/insert-delete-getrandom-o1/Factorial Trailing Zeroes
 // Author : avebeatrix
 // Date   : 2021-12-15
 
