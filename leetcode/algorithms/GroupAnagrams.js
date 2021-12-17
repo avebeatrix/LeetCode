@@ -5,8 +5,6 @@
  * @param {string[]} strs
  * @return {string[][]}
  */
-//Input: strs = ["eat","tea","tan","ate","nat","bat"]
-//Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
 var groupAnagrams = function (strs) {
     let map = new Map();
     strs.forEach(str => {
