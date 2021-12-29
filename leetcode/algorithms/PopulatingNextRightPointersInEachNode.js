@@ -1,6 +1,6 @@
 // Source : https://leetcode.com/problems/populating-next-right-pointers-in-each-node/
 // Author : avebeatrix
-// Date   : 2021-11-27
+// Date   : 2021-12-27
 /**
  * // Definition for a Node.
  * function Node(val, left, right, next) {
