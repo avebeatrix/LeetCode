@@ -25,5 +25,3 @@ var addBinary = function (a, b) {
     }
     return is_not_null && add ? '1' + result : result;
 };
-let d = addBinary("11", "1");
-let k;
