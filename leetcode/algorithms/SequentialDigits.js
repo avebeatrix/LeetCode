@@ -7,18 +7,18 @@
  * @return {number[]}
  */
 var sequentialDigits = function (low, high) {
-    let min_l = low.toString().split('').length;
-    let max_l = high.toString().split('').length;
+    let min_l = String(low).length;
+    let max_l = String(high).length;
     let arr = [];
-    let digits = [...Array(10).keys()];
+    let digits = '0123456789';
     for (let i = min_l; i <= max_l; i++) {
         for (let j = 1; j <= 10 - i; j++) {
-            let candidate = Number(digits.slice(j, j + i).join(''));
-            if (candidate <= high && candidate >= low){
-                arr.push(Number(digits.slice(j, j + i).join('')));
+            let candidate = Number(digits.slice(j, j + i));
+            if (candidate > high) return arr;
+            if (candidate >= low){
+                arr.push(Number(digits.slice(j, j + i)));
             }            
         }
-    }
-    arr.sort((a, b) => a - b);
+    }    
     return arr;
 };
