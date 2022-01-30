@@ -18,5 +18,3 @@ var findPeakElement = function (nums) {
     }  
     return l; 
 };
-let d = findPeakElement([1, 2, 3, 1]);
-let k;
