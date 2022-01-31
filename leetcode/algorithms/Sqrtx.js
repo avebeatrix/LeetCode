@@ -18,4 +18,3 @@ var mySqrt = function (x) {
     }
     return l;
 };
-console.log(mySqrt(125));
