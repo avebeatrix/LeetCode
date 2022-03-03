@@ -31,4 +31,3 @@ var numberOfArithmeticSlices = function (nums) {
     }
     return result;
 };
-console.log(numberOfArithmeticSlices([1,3,5,7,9, 0, 0,0]));
