@@ -29,7 +29,7 @@ var removeCoveredIntervals = function (intervals) {
     });
     let counter = 0;
     let opened_set = new Set();
-    let opened_set = new Set();
+  
     let map = new Map(); /* to do - need make current set instead of map */
     for (let event of events) {
         let index = event[2];
