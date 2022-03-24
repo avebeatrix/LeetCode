@@ -1,3 +1,6 @@
+// Source : https://leetcode.com/problems/broken-calculator/
+// Author : avebeatrix
+// Date   : 2022-03-23
 /**
  * @param {number} startValue
  * @param {number} target
@@ -18,4 +21,3 @@ var brokenCalc = function (startValue, target) {
     res += startValue - cur;         
     return res;
 };
-console.log(brokenCalc(startValue = 6, target = 13));
