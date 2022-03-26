@@ -20,5 +20,3 @@
     if (nums[r] !== target) return -1;
     return r;   
 };
-//console.log(search(nums = [-1,0,3,5,9,12], target = 9));
-console.log(search(nums = [-1,0,3,5,9], target = 3));
