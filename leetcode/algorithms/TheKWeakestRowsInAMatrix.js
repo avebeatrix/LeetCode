@@ -10,7 +10,6 @@
     let arr = [];
     mat.forEach((row, i) => {
         arr.push([row.reduce((acc, val) => acc+=val, 0), i]);
-    })
-    arr.sort((a, b) => a[0] - b[0]);
-    return arr.slice(0, k).map(val => val[1]);
+    })   
+    return arr.sort((a, b) => a[0] - b[0]).slice(0, k).map(val => val[1]);
 };
