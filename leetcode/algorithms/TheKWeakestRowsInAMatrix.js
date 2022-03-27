@@ -14,10 +14,3 @@
     arr.sort((a, b) => a[0] - b[0]);
     return arr.slice(0, k).map(val => val[1]);
 };
-let d = kWeakestRows(mat = 
-    [[1,0,0,0],
- [1,1,1,1],
- [1,0,0,0],
- [1,0,0,0]], 
-k = 2);
-let t;
