@@ -8,6 +8,12 @@
 var nextPermutation = function (nums) {
     let len = nums.length;
     let index = -1;
+
+    let swap = (i, j) => {
+        nums[i] = nums[i] + nums[j];
+        nums[j] = nums[i] - nums[j];
+        nums[i] = nums[i] - nums[j];
+    }
     for (let i = len - 2; i >= 0; i--) {
         if (nums[i] < nums[i + 1]) {
             index = i;
@@ -19,27 +25,15 @@ var nextPermutation = function (nums) {
                     nextMinIndex = j;
                 }
             }
-            nums[i] = nums[i] + nums[nextMinIndex];
-            nums[nextMinIndex] = nums[i] - nums[nextMinIndex];
-            nums[i] = nums[i] - nums[nextMinIndex];
+            swap(i, nextMinIndex);
             break;
         }
     }
-
-    let qsort = (l, r) => {
-        if (l >= r) return;
-        let pivot = l;
-        for (let i = l + 1; i <= r; i++) {
-            if (nums[i] <= nums[pivot]) {
-                nums[i] = nums[i] + nums[pivot];
-                nums[pivot] = nums[i] - nums[pivot];
-                nums[i] = nums[i] - nums[pivot];
-                pivot = i;
-            }
-        }
-              
-        qsort(l, pivot - 1);
-        qsort(pivot + 1, r);
+    let i = index + 1;
+    let j = len - 1;
+    while (i < j) {
+        swap(i, j);
+        i++;
+        j--;
     }
-    qsort(index + 1, len - 1);   
 };
