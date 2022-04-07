@@ -6,6 +6,7 @@
  * @param {number} target
  * @return {number}
  */
+/* todo: counting is not so good, combination can be simpler without factorial */
 var threeSumMulti = function (arr, target) {
     const MODULO_BASE = 10**9 + 7;
     let combination = (k, n) => {
