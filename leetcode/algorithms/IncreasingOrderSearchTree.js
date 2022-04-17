@@ -13,33 +13,26 @@
  * @param {TreeNode} root
  * @return {TreeNode}
  */
- var increasingBST = function(root) {
-     if (!root) return root;
+var increasingBST = function (root) {
+    if (!root) return root;
     let new_root = null;
     let cur = null;
     let traverse = (node) => {
         if (node.left) {
             traverse(node.left);
+        }
+        if (!new_root) {
+            new_root = node;
+            cur = node;
+            cur.left = null;
+        } else {
             cur.right = node;
             cur = cur.right;
             cur.left = null;
-            if (node.right) {
-                traverse(node.right);
-            }
-        } else {
-            if (!new_root) {
-                new_root = node;
-                cur = node;
-                cur.left = null;
-            } else {
-                cur.right = node;
-                cur = cur.right;
-                cur.left = null;
-            }  
-            if (node.right) {              
-                traverse(node.right);
-            }                      
-        }        
+        }
+        if (node.right) {
+            traverse(node.right);
+        }
     }
     traverse(root);
     return new_root;
