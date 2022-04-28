@@ -1,6 +1,8 @@
 // Source : https://leetcode.com/problems/path-with-minimum-effort/
 // Author : avebeatrix
 // Date   : 2022-04-28
+// T: O((M*N)log(M*N))
+// S: O(M*N)
 /**
  * @param {number[][]} heights
  * @return {number}
