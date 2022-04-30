@@ -1,6 +1,6 @@
 // Source : https://leetcode.com/problems/path-with-minimum-effort/
 // Author : avebeatrix
-// Date   : 2022-04-28
+// Date   : 2022-04-29
 /**
  * @param {number[][]} graph
  * @return {boolean}
