@@ -35,28 +35,24 @@
     this.list = nestedList;
     this.stack = [];
 
-    let add = list => {
-        list.forEach(val => {
-            if (val.isInteger()) {
-                this.stack.push(val.getInteger());                
-            } else {
-                add(val.getList());
-            }            
-        })
-    }
-
-    add(nestedList);
-    this.stack.reverse();
+    this._prepareStack(nestedList);
 };
 
+NestedIterator.prototype._prepareStack = function(list) {
+   list.reverse().forEach(val => {       
+        this.stack.push(val);
+    })
+};
 
 /**
  * @this NestedIterator
  * @returns {boolean}
  */
 NestedIterator.prototype.hasNext = function() {
-    if (this.stack.length) return true;
-    return false;
+    while (this.stack.length && !this.stack[this.stack.length - 1].isInteger()) {        
+        this._prepareStack(this.stack.pop().getList());      
+    }    
+    return this.stack.length;
 };
 
 /**
@@ -64,7 +60,7 @@ NestedIterator.prototype.hasNext = function() {
  * @returns {integer}
  */
 NestedIterator.prototype.next = function() {
-    return this.stack.pop();       
+    return this.stack.pop().getInteger();       
 };
 
 /**
