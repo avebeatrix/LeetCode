@@ -32,6 +32,3 @@
     
     return result;
 };
-
-let d = permuteUnique([1,2,3]);
-let k;
