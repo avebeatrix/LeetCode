@@ -1,11 +1,12 @@
 // Source : https://leetcode.com/problems/coin-change/
 // Author : avebeatrix
-// Date   : 2021-12-24
+// Date   : 2022-05-21
 /**
  * @param {number[]} coins
  * @param {number} amount
  * @return {number}
  */
+/* BFS */
 var coinChange = function (coins, amount) {
     if (!amount) return 0;
     if (Math.min(coins) > amount) return -1;
@@ -44,4 +45,29 @@ var coinChange = function (coins, amount) {
     }
 
     return -1;
+};
+/*DP*/
+var coinChange = function (coins, amount) {
+    if (!amount) return 0;
+    if (Math.min(coins) > amount) return -1;
+
+    let dp = Array(amount + 1).fill(amount + 1);
+    dp[0] = 0;
+    
+    let N = coins.length;
+
+    for (let i = 0; i < N; i++) {
+        let new_dp = Array(amount + 1).fill(amount + 1);   
+        new_dp[0] = 0;  
+        for (let j = 1; j <= amount; j++) {  
+            if (j >= coins[i]) {               
+                new_dp[j] = Math.min(dp[j] , new_dp[j - coins[i]] + 1);             
+            } else {
+                new_dp[j] = dp[j];
+            }             
+        }
+        dp = new_dp;
+        new_dp = [];
+    }
+    return dp[amount] > amount ? -1 : dp[amount];
 };
