@@ -21,4 +21,3 @@
 	}
 	return dp[m][n];
 };
-console.log(findMaxForm(["10","0001","111001","1","0"], 1, 1));
