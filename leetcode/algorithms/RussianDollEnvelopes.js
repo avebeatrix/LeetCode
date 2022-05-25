@@ -26,5 +26,3 @@ var maxEnvelopes = function (envelopes) {
     }
     return dp.length;    
 };
-
-console.log(maxEnvelopes([[4,5],[4,6],[6,7],[2,3],[1,1]]));
