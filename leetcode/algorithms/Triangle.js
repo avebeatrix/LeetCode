@@ -17,4 +17,3 @@
     })
     return Math.min(...dp);
 };
-console.log(minimumTotal([[-1],[-2,-3]]));
