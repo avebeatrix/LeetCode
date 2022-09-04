@@ -39,4 +39,3 @@
     }
     return result;
 };
-console.log(numSquares(13));
